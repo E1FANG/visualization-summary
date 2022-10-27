@@ -6,10 +6,9 @@ export default {
     ],
     sidebar: [
       {
-        text: 'Guide',
+        text: '目录',
         items: [
-          { text: 'Introduction', link: '/introduction' },
-          { text: 'Getting Started', link: '/getting-started' },
+          { text: '立体图表', link: '/chart' },
         ]
       }
     ]

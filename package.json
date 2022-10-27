@@ -13,7 +13,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "echarts": "^5.4.0",
+    "highcharts": "^10.2.1",
+    "lodash-es": "^4.17.21",
     "vitepress": "1.0.0-alpha.18",
     "vue": "^3.2.40"
+  },
+  "devDependencies": {
+    "sass": "^1.55.0"
   }
 }

@@ -1,14 +1,13 @@
 <script setup>
-import Index from '../src/components/index.vue';
+import Vertical from '../src/chart/barChart/vertical.vue';
 </script>
 <style lang="scss">
 .title {
     font-size: 24px;
 }
 </style>
-# text 
-# VitePress
 
+# 纵向图表
 <Tag/> 
 <div class="title">demo</div>
-<Index/>
+<Vertical/>
