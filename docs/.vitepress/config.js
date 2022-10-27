@@ -1,3 +1,4 @@
+
 export default {
   themeConfig: {
     siteTitle: '可视化技术总结',
@@ -11,6 +12,7 @@ export default {
           { text: '立体图表', link: '/chart' },
         ]
       }
-    ]
-  }
+    ],
+    aside:true
+  },
 }
