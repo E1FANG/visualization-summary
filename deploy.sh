@@ -23,3 +23,5 @@ git commit -m 'deploy'
 git push -f git@github.com:E1FANG/visualization-summary.git main:gh-pages1
 
 cd -
+
+echo 'OK!'
