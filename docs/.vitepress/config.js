@@ -1,5 +1,9 @@
 
+/**
+ * @type {import('vitepress').UserConfig}
+ */
 export default {
+  base:'/visualization-summary/',
   themeConfig: {
     siteTitle: '可视化技术总结',
     nav: [
