@@ -1,6 +1,6 @@
 import * as echarts from 'echarts/core'
 
-export function initEchartGraphicShape () {
+export function initEchartGraphicShape() {
   // 绘制左侧面
   const CubeLeft = echarts.graphic.extendShape({
     shape: {
@@ -69,7 +69,7 @@ export function initEchartGraphicShape () {
   echarts.graphic.registerShape('CubeTop', CubeTop)
 }
 
-export function initHorizontalEchartGraphicShape () {
+export function initHorizontalEchartGraphicShape() {
   const longDiagonal = 8
   const shortDiagonal = 6
   // 绘制左侧面
