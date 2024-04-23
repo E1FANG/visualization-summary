@@ -6,6 +6,8 @@
 import Vertical from '../src/chart/3dBarChart/vertical.vue';
 import Horizon from '../src/chart/3dBarChart/horizon.vue';
 import GridChart from '../src/chart/3dBarChart/gird-chart.vue';
+import StackChart from '../src/chart/3dBarChart/stack-chart.vue';
+import NotStackChart from '../src/chart/3dBarChart/not-stack-chart.vue';
 </script>
 <style lang="scss">
 .title {
@@ -23,10 +25,10 @@ import GridChart from '../src/chart/3dBarChart/gird-chart.vue';
 
 ```vue
 <script setup>
-import DataChart from "../component/dataChart.vue";
-import { renderItemFnGenerator, get3DBarOption } from '../config/render3DBarChart'
-
 import { computed, onMounted, ref } from 'vue'
+import DataChart from "../component/dataChart.vue";
+
+import { renderItemFnGenerator, get3DBarOption } from '../config/render3DBarChart'
 
 const barSource = ref([{
   name:'企业1',
@@ -80,12 +82,10 @@ const barOption = computed(()=>get3DBarOption({
 
 ```vue
 <script setup>
-import DataChart from "../component/dataChart.vue";
-import { renderHorizontalItemFnGenerator, getHorizontal3DBarOption } from '../config/render3DBarChart'
-
 import { computed, onMounted, ref } from 'vue'
+import DataChart from "../component/dataChart.vue";
 
-
+import { renderHorizontalItemFnGenerator, getHorizontal3DBarOption } from '../config/render3DBarChart'
 import { horizontalGreenBar } from '../config/colorFor3d'
 
 
@@ -148,17 +148,12 @@ const barOption = computed(()=>getHorizontal3DBarOption({
 
 ```vue
 <script setup>
-import DataChart from "../component/dataChart.vue";
-import { renderHorizontalItemFnGenerator, getHorizontal3DBarOption } from '../config/render3DBarChart'
-
-import { getCenterItemLayoutOption } from '../config/grid'
-
-
-import { getLegendBottom } from '../config/chart-utils'
-
 import { onMounted, ref } from 'vue'
+import DataChart from "../component/dataChart.vue";
 
-
+import { renderHorizontalItemFnGenerator, getHorizontal3DBarOption } from '../config/render3DBarChart'
+import { getCenterItemLayoutOption } from '../config/grid'
+import { getLegendBottom } from '../config/chart-utils'
 import {
   reverseHorBlueBar,
   horizontalGreenBar
@@ -228,6 +223,95 @@ onMounted(() => {
   height: 350px;
 }
 </style>
+```
+
+</details>
+
+## 堆叠柱状图
+
+<StackChart/>
+
+<details>
+<summary>代码</summary>
+
+```vue
+<script setup>
+import { computed, onMounted, ref } from 'vue'
+import DataChart from "../component/dataChart.vue";
+
+import { renderHorizontalItemFnGenerator, getHorizontal3DBarOption } from '../config/render3DBarChart'
+import { horizontalGreenBar, HorBlueBar } from '../config/colorFor3d'
+
+const barOption = computed(() => getHorizontal3DBarOption({
+  yAxis: {
+    data: barSource.value.map(e => e.name)
+  },
+  series: [
+    {
+      name: '企业车辆数',
+      type: 'custom',
+      renderItem: renderHorizontalItemFnGenerator({
+        color: horizontalGreenBar
+      }),
+      data: barSource.value.map(e => e.total)
+    },
+    {
+      name: '企业车辆数',
+      type: 'custom',
+      renderItem: renderHorizontalItemFnGenerator({
+        color: HorBlueBar
+      }),
+      data: barSource.value.map(e => e.single)
+    }
+  ]
+}))
+</script>
+```
+
+</details>
+
+
+## 非堆叠柱状图
+<NotStackChart />
+依赖自己封装的自定义属性 <strong>offset</strong>
+
+<details>
+<summary>代码</summary>
+
+```vue
+<script setup>
+import { computed, onMounted, ref } from 'vue'
+import DataChart from "../component/dataChart.vue";
+
+import { renderHorizontalItemFnGenerator, getHorizontal3DBarOption } from '../config/render3DBarChart'
+import { horizontalGreenBar, HorBlueBar } from '../config/colorFor3d'
+
+const barOption = computed(() => getHorizontal3DBarOption({
+  yAxis: {
+    data: barSource.value.map(e => e.name)
+  },
+  series: [
+    {
+      name: '企业车辆数',
+      type: 'custom',
+      renderItem: renderHorizontalItemFnGenerator({
+        color: horizontalGreenBar,
+        offset: -13,
+      }),
+      data: barSource.value.map(e => e.total)
+    },
+    {
+      name: '企业车辆数',
+      type: 'custom',
+      renderItem: renderHorizontalItemFnGenerator({
+        color: HorBlueBar,
+        offset: 13
+      }),
+      data: barSource.value.map(e => e.single)
+    }
+  ]
+}))
+</script>
 ```
 
 </details>
