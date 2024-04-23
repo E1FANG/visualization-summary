@@ -3,6 +3,7 @@
  */
 export default {
   base: "/visualization-summary/",
+  appearance: "dark",
   themeConfig: {
     siteTitle: "可视化技术总结",
     nav: [{ text: "Guide", link: "/guide" }],
