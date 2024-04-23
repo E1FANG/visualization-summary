@@ -1,6 +1,6 @@
 <script setup>
-import Vertical from '../src/chart/barChart/vertical.vue';
-import Horizon from '../src/chart/barChart/horizon.vue';
+import Vertical from '../src/chart/3dBarChart/vertical.vue';
+import Horizon from '../src/chart/3dBarChart/horizon.vue';
 </script>
 <style lang="scss">
 .title {
