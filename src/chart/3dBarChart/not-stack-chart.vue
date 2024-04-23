@@ -1,11 +1,11 @@
 <script setup>
 import DataChart from "../component/dataChart.vue";
-import { renderHorizontalItemFnGenerator, getHorizontal3DBarOption } from '../config/render3DBarChart'
+import { renderItemFnGenerator, get3DBarOption } from '../config/render3DBarChart'
 
 import { computed, onMounted, ref } from 'vue'
 
 
-import { horizontalGreenBar, HorBlueBar } from '../config/colorFor3d'
+import { yellowBar } from '../config/colorFor3d'
 
 
 const barSource = ref([{
@@ -29,16 +29,15 @@ const barSource = ref([{
   total: 423,
   single: 232
 }])
-const barOption = computed(() => getHorizontal3DBarOption({
-  yAxis: {
+const barOption = computed(() => get3DBarOption({
+  xAxis: {
     data: barSource.value.map(e => e.name)
   },
   series: [
     {
       name: '企业车辆数',
       type: 'custom',
-      renderItem: renderHorizontalItemFnGenerator({
-        color: horizontalGreenBar,
+      renderItem: renderItemFnGenerator({
         offset: -13,
       }),
       data: barSource.value.map(e => e.total)
@@ -46,8 +45,8 @@ const barOption = computed(() => getHorizontal3DBarOption({
     {
       name: '企业车辆数',
       type: 'custom',
-      renderItem: renderHorizontalItemFnGenerator({
-        color: HorBlueBar,
+      renderItem: renderItemFnGenerator({
+        color: yellowBar,
         offset: 13
       }),
       data: barSource.value.map(e => e.single)
