@@ -142,7 +142,7 @@ const hoverHandler = debounce((e) => {
 
   // set
   highlighStreet(currentCode.value)
-}, 0)
+}, 250)
 
 const bindEventListener = () => {
   wholeMap.value.addEventListener('mouseover', hoverHandler)
