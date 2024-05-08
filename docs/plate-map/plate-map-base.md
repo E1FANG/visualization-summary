@@ -6,7 +6,7 @@ import UsageBase from '../../src/plateMap/usageBase.vue'
 # 基础用法
 - 通过useMapLoop设置地图数据，就可以用鼠标hover板块进行弹窗数据展示。
 - 对弹窗做了处理，使其不会超出板块地图
-- 
+
 <UsageBase />
 
 <details open>
