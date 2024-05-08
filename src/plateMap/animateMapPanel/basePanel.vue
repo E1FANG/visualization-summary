@@ -25,7 +25,9 @@ const colsData = computed(() => {
     '镇街名称'
     " width="304px" v-bind="$attrs" class="slot"> -->
   <div class="pop-panel-wrap">
-
+    <div class="main-title">
+      {{ currentStreetData.name || currentStreetData.areaName || title || '镇街名称' }}
+    </div>
     <template v-if="colsData.length > 0">
       <div v-for="(item, index) in colsData" :key="index" class="col">
         <span class="title"> {{ item.name }}： </span>
@@ -48,6 +50,21 @@ const colsData = computed(() => {
   background: rgba(0, 33, 78, 0.9);
   border: 1px solid #009bfc;
   border-radius: 10px;
+
+  .main-title {
+    padding-left: 12px;
+    padding-top: 4px;
+    text-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+    font-size: 16px;
+    font-family: YouSheBiaoTiHei;
+    font-weight: 600;
+    text-align: left;
+    line-height: 31px;
+    letter-spacing: 2px;
+    background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(121deg, #ffffff 7%, #85d0ff 87%);
+  }
 }
 
 .title-container {

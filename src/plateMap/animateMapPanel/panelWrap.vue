@@ -15,9 +15,12 @@ const { position } = toRefs(props)
 
 // 左右
 const getJustify = (x) => {
+  const ifSwitch = screen.width <= 1920
   const map = [
-    [x > 1080.1, 'flex-start'],
-    [x < 640.3, 'flex-end'],
+    [ifSwitch && x > 1238.1, 'flex-start'],
+    [ifSwitch && x < 910.3, 'flex-end'],
+    [!ifSwitch && x > 1600.1, 'flex-start'],
+    [!ifSwitch && x < 1094.6, 'flex-end']
   ]
   const target = map.find((e) => e[0])
   return {
@@ -64,6 +67,8 @@ const style = ref()
 watch(
   position,
   (val) => {
+    console.log(11111, val)
+    console.log(22222, screen.width)
     style.value = {
       ...getJustify(val.x),
       ...getItemAlign(val.y)
