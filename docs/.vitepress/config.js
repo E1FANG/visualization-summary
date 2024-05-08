@@ -9,6 +9,15 @@ export default {
     nav: [{ text: "Guide", link: "/guide" }],
     sidebar: [
       {
+        text: "板块地图",
+        items: [
+          {
+            text: "板块地图",
+            link: "/plate-map",
+          },
+        ],
+      },
+      {
         text: "3D图表",
         items: [
           {
