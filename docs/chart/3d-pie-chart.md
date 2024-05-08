@@ -1,5 +1,5 @@
 <script setup>
-import PieChart from '../src/chart/3dPieChart/index.vue';
+import PieChart from '../../src/chart/3dPieChart/index.vue';
 </script>
 
 # 立体饼图

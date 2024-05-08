@@ -1,10 +1,10 @@
 <script setup>
-import UsageBarPopup from '../src/plateMap/usageBarPopup.vue'
+import UsageBarPopup from '../../src/plateMap/usageBarPopup.vue'
 </script>
 
 
 # 自定义弹窗组件
-
+<br/>
 <UsageBarPopup />
 
 <details>

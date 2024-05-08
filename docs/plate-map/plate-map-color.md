@@ -1,5 +1,5 @@
 <script setup>
-import UsageColorRender from '../src/plateMap/usageColorRender.vue'
+import UsageColorRender from '../../src/plateMap/usageColorRender.vue'
 </script>
 
 

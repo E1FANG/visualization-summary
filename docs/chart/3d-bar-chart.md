@@ -3,11 +3,11 @@
 另可结合其他的配置函数，灵活配置图表。
 
 <script setup>
-import Vertical from '../src/chart/3dBarChart/vertical.vue';
-import Horizon from '../src/chart/3dBarChart/horizon.vue';
-import GridChart from '../src/chart/3dBarChart/gird-chart.vue';
-import StackChart from '../src/chart/3dBarChart/stack-chart.vue';
-import NotStackChart from '../src/chart/3dBarChart/not-stack-chart.vue';
+import Vertical from '../../src/chart/3dBarChart/vertical.vue';
+import Horizon from '../../src/chart/3dBarChart/horizon.vue';
+import GridChart from '../../src/chart/3dBarChart/gird-chart.vue';
+import StackChart from '../../src/chart/3dBarChart/stack-chart.vue';
+import NotStackChart from '../../src/chart/3dBarChart/not-stack-chart.vue';
 </script>
 <style lang="scss">
 .title {

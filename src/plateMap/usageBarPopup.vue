@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted } from 'vue';
+import { onMounted, onUnmounted } from 'vue';
 import { areaDict } from "./area";
 import { useMapLoop } from './useMapLoop.js'
 import PlateMap from "./index.vue";
@@ -20,6 +20,10 @@ onMounted(() => {
   setLoopData(generateData())
   setPanelType('barChart')
   startLoop()
+})
+
+onUnmounted(() => {
+  setPanelType('base')
 })
 </script>
 

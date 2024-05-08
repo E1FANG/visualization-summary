@@ -13,19 +13,19 @@ export default {
         items: [
           {
             text: "基础用法",
-            link: "/plate-map-base",
+            link: "/plate-map/plate-map-base",
           },
           {
             text: "板块轮播",
-            link: "/plate-map-loop",
+            link: "/plate-map/plate-map-loop",
           },
           {
             text: "自定义颜色渲染",
-            link: "/plate-map-color",
+            link: "/plate-map/plate-map-color",
           },
           {
             text: "自定义弹窗组件",
-            link: "/plate-map-cpn",
+            link: "/plate-map/plate-map-cpn",
           },
         ],
       },
@@ -34,11 +34,11 @@ export default {
         items: [
           {
             text: "柱状图",
-            link: "/3d-bar-chart",
+            link: "/chart/3d-bar-chart",
           },
           {
             text: "饼图",
-            link: "/3d-pie-chart",
+            link: "/chart/3d-pie-chart",
           },
         ],
       },

@@ -48,6 +48,7 @@ const barOption = computed(() => get3DBarOption({
     }
   ]
 }))
+
 </script>
 
 <template>
@@ -61,7 +62,7 @@ const barOption = computed(() => get3DBarOption({
 
 <style lang="scss" scoped>
 .bar-chart {
-  height: 160px;
+  height: 170px;
 }
 
 .pop-panel-wrap {

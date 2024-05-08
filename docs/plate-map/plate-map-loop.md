@@ -1,5 +1,5 @@
 <script setup>
-import UsageLoop from '../src/plateMap/usageLoop.vue'
+import UsageLoop from '../../src/plateMap/usageLoop.vue'
 </script>
 
 
