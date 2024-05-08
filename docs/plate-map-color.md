@@ -10,7 +10,7 @@ import UsageColorRender from '../src/plateMap/usageColorRender.vue'
 
 <UsageColorRender />
 
-<details>
+<details open>
 <summary>代码</summary>
 
 ```vue

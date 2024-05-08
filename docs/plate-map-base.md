@@ -10,7 +10,7 @@ import UsageBase from '../src/plateMap/usageBase.vue'
 
 <UsageBase />
 
-<details>
+<details open>
 <summary>代码</summary>
 
 ```vue

@@ -12,7 +12,7 @@ import UsageLoop from '../src/plateMap/usageLoop.vue'
 
 <UsageLoop />
 
-<details>
+<details open>
 <summary>代码</summary>
 
 ```vue
