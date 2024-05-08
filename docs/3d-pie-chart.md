@@ -8,7 +8,7 @@ import PieChart from '../src/chart/3dPieChart/index.vue';
 <PieChart />
 
 
-<details>
+<details open>
 <summary>代码</summary>
 
 ```vue

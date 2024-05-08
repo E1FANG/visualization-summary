@@ -11,8 +11,10 @@ const customerColorRender = ref(false);
 // 当前轮播到的镇街
 const currentLoop = computed(() => streetData.value[streetDataIndex.value]);
 
+// 弹窗类型
+const panelType = ref("base");
+
 export const useMapLoop = () => {
-  const panelType = ref("base");
   const setLoopData = (data) => {
     loopData.value = data;
   };
@@ -40,15 +42,23 @@ export const useMapLoop = () => {
     console.log("use run", loopData.value);
     customerColorRender.value = boolean;
   };
+
+  const setPanelType = (type) => {
+    panelType.value = type;
+  };
   return {
-    panelType,
     loopData,
     setLoopData,
+
     loopClock,
-    startLoop,
     currentLoop,
+    startLoop,
     destroyLoop,
+
     customerColorRender,
     setCustomerColorRender,
+
+    panelType,
+    setPanelType,
   };
 };

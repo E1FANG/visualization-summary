@@ -23,6 +23,10 @@ export default {
             text: "自定义颜色渲染",
             link: "/plate-map-color",
           },
+          {
+            text: "自定义弹窗组件",
+            link: "/plate-map-cpn",
+          },
         ],
       },
       {

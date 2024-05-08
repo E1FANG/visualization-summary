@@ -13,7 +13,7 @@ import { debounce } from 'lodash-es'
 import SvgMap from './svgMap.vue'
 import panelWrap from './animateMapPanel/panelWrap.vue'
 import BasePanel from './animateMapPanel/basePanel.vue'
-import ChartPanel from './animateMapPanel/chartPanel.vue'
+import BarChartPanel from './animateMapPanel/barChartPanel.vue'
 
 import { useMapLoop } from './useMapLoop.js'
 
@@ -211,6 +211,7 @@ const closePanel = () => {
 
 window.addEventListener('scroll', () => {
   closePanel()
+  // destroyLoop.value()
 })
 
 
@@ -233,6 +234,14 @@ watch(
 )
 
 
+// 弹窗组件拓展 注册
+const cpnDict = {
+  base: BasePanel,
+  barChart: BarChartPanel
+}
+
+
+
 
 </script>
 
@@ -242,8 +251,7 @@ watch(
     <div v-if="popupPosition" class="pop reset-pointer-event"
       :style="{ top: popupPosition.y + 'px', left: popupPosition.x + 'px' }">
       <panelWrap :position="originPosition">
-        <component :is="panelType === 'base' ? BasePanel : ChartPanel" :title="currentId"
-          :current-street-data="currentStreetData">
+        <component :is="cpnDict[panelType]" :title="currentId" :current-street-data="currentStreetData">
         </component>
       </panelWrap>
     </div>

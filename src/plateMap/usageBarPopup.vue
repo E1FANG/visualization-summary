@@ -4,7 +4,7 @@ import { areaDict } from "./area";
 import { useMapLoop } from './useMapLoop.js'
 import PlateMap from "./index.vue";
 
-const { setLoopData, startLoop } = useMapLoop()
+const { setLoopData, setPanelType, startLoop } = useMapLoop()
 
 const generateData = () => {
   return areaDict.map(e => ({
@@ -18,6 +18,7 @@ const generateData = () => {
 
 onMounted(() => {
   setLoopData(generateData())
+  setPanelType('barChart')
   startLoop()
 })
 </script>

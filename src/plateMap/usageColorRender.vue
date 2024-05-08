@@ -51,4 +51,4 @@ onBeforeUnmount(() => {
   </div>
 </template>
 
-<style lang="scss" scoped></style>./area.js./area.js
+<style lang="scss" scoped></style>
