@@ -3,7 +3,9 @@ import UsageBase from '../src/plateMap/usageBase.vue'
 </script>
 
 
-# 板块地图基础用法
+# 基础用法
+
+通过useMapLoop设置地图数据，就可以用鼠标hover板块进行弹窗数据展示。
 <br/>
 
 <UsageBase />
@@ -47,3 +49,17 @@ onMounted(() => {
 ```
 
 </details>
+
+useMapLoop, 这个hook暴露了一些控制板块地图的api，方便使用者对地图进行操作
+
+| Api      | 作用 |
+| ----------- | ----------- |
+| setLoopData      | 设置板块地图数据       |
+| loopClock   | 获取当前轮播计时器        |
+| startLoop   | 开始地图轮播        |
+| destroyLoop   | 销毁轮播        |
+| currentLoop   | 获取当前轮播数据        |
+| customerColorRender   | 获取当前自定义颜色渲染器状态        |
+| setCustomerColorRender   | 设置当前自定义颜色渲染器状态        
+
+具体的一些用法和效果，可以查看后面的篇章。

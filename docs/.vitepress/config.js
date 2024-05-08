@@ -19,6 +19,10 @@ export default {
             text: "板块轮播",
             link: "/plate-map-loop",
           },
+          {
+            text: "自定义颜色渲染",
+            link: "/plate-map-color",
+          },
         ],
       },
       {

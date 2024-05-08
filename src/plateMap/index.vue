@@ -83,6 +83,11 @@ const initMap = () => {
   useColorRender()
 }
 
+
+watch(customerColorRender, () => {
+  initMap()
+})
+
 // svg highligh
 const highlighStreet = (code) => {
   const text = getTextSpan(code)
@@ -105,7 +110,7 @@ const resetStreet = (code) => {
         changeSvgColor(
           e,
           customItem ? customItem.color : normalBg,
-          normalStroke
+          customItem ? customItem.border : normalStroke
         )
       } else {
         changeSvgColor(e, normalBg, normalStroke)
@@ -158,6 +163,7 @@ onMounted(() => {
 
 onBeforeUnmount(() => {
   unbindEventListener()
+  destroyLoop.value()
 })
 
 // init popup position 弹窗

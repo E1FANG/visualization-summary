@@ -4,6 +4,10 @@ import UsageLoop from '../src/plateMap/usageLoop.vue'
 
 
 # 板块轮播
+
+- 添加好地图数据后，即可通过startLoop()开启轮播
+- 默认在组件卸载时，销毁定时器。
+- 轮播默认时间间距为250毫秒，也可以通过startLoop的第一个参数修改。
 <br/>
 
 <UsageLoop />

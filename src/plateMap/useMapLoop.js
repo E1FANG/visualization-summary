@@ -6,6 +6,7 @@ const loopData = ref();
 const streetData = ref(areaDict);
 const loopClock = ref(null);
 const streetDataIndex = ref(null);
+const customerColorRender = ref(false);
 
 // 当前轮播到的镇街
 const currentLoop = computed(() => streetData.value[streetDataIndex.value]);
@@ -35,7 +36,6 @@ export const useMapLoop = () => {
   };
 
   // 自定义板块颜色
-  const customerColorRender = ref(false);
   const setCustomerColorRender = (boolean) => {
     console.log("use run", loopData.value);
     customerColorRender.value = boolean;
@@ -47,7 +47,6 @@ export const useMapLoop = () => {
     loopClock,
     startLoop,
     currentLoop,
-    startLoop,
     destroyLoop,
     customerColorRender,
     setCustomerColorRender,
