@@ -67,8 +67,6 @@ const style = ref()
 watch(
   position,
   (val) => {
-    console.log(11111, val)
-    console.log(22222, screen.width)
     style.value = {
       ...getJustify(val.x),
       ...getItemAlign(val.y)

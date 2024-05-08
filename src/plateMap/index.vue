@@ -4,9 +4,8 @@ import {
   onBeforeUnmount,
   onMounted,
   ref,
+  watch,
   toRefs,
-  unref,
-  watch
 } from 'vue'
 
 import { debounce } from 'lodash-es'
@@ -20,7 +19,7 @@ import { useMapLoop } from './useMapLoop.js'
 
 
 
-const { loopData, customerColorRender, panelType } = toRefs(useMapLoop())
+const { loopData, customerColorRender, panelType, currentLoop, destroyLoop, loopClock } = toRefs(useMapLoop())
 
 // map's property
 const map = ref(null)
@@ -125,10 +124,10 @@ const currentStreetData = computed(() => {
 })
 
 const hoverHandler = debounce((e) => {
-  // if (loopClock.value) {
-  //   initMap()
-  //   destroyLoop.value()
-  // }
+  if (loopClock.value) {
+    initMap()
+    destroyLoop.value()
+  }
   const { target } = e
   const id = getId(target) || getId(target.parentNode)
   const code = getAreaCode(target) || getAreaCode(target.parentNode)
@@ -143,7 +142,7 @@ const hoverHandler = debounce((e) => {
 
   // set
   highlighStreet(currentCode.value)
-}, 250)
+}, 0)
 
 const bindEventListener = () => {
   wholeMap.value.addEventListener('mouseover', hoverHandler)
@@ -196,6 +195,36 @@ const popupPosition = computed(() => {
     return null
   }
 })
+
+// 关闭弹窗
+const closePanel = () => {
+  // popupPosition 依赖text
+  currentText.value = null
+  resetStreet(currentCode.value)
+}
+
+window.addEventListener('scroll', () => {
+  closePanel()
+})
+
+
+// 镇街轮播
+watch(
+  currentLoop,
+  (val, preVal) => {
+    if (val && val.areaCode) {
+      currentCode.value = val.areaCode
+      if (preVal) {
+        resetStreet(preVal.areaCode)
+      }
+      highlighStreet(val.areaCode)
+    }
+  },
+  {
+    // immediate: true
+    // flush: 'sync'
+  }
+)
 
 
 

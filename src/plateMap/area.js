@@ -1,12 +1,12 @@
 export const areaDict = [
-  {
-    id: 1,
-    parentCode: "440000",
-    areaCode: "441900",
-    name: "东莞市",
-    longitude: 113.751765,
-    latitude: 23.020536,
-  },
+  // {
+  //   id: 1,
+  //   parentCode: "440000",
+  //   areaCode: "441900",
+  //   name: "东莞市",
+  //   longitude: 113.751765,
+  //   latitude: 23.020536,
+  // },
   {
     id: 2,
     parentCode: "441900",

@@ -12,8 +12,12 @@ export default {
         text: "板块地图",
         items: [
           {
-            text: "板块地图",
-            link: "/plate-map",
+            text: "基础用法",
+            link: "/plate-map-base",
+          },
+          {
+            text: "板块轮播",
+            link: "/plate-map-loop",
           },
         ],
       },

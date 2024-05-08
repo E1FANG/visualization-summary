@@ -33,6 +33,7 @@ const colsData = computed(() => {
         <span class="title"> {{ item.name }}： </span>
         <span class="count">
           <!-- <GradientText :text="item.count" color="darkYellow" /> -->
+          {{ item.count }}
         </span>
       </div>
     </template>
@@ -45,6 +46,7 @@ const colsData = computed(() => {
 
 <style lang="scss" scoped>
 .pop-panel-wrap {
+  padding: 16px;
   width: 304px;
   min-height: 200px;
   background: rgba(0, 33, 78, 0.9);
@@ -52,8 +54,6 @@ const colsData = computed(() => {
   border-radius: 10px;
 
   .main-title {
-    padding-left: 12px;
-    padding-top: 4px;
     text-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
     font-size: 16px;
     font-family: YouSheBiaoTiHei;
