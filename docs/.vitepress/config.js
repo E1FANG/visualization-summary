@@ -6,6 +6,7 @@ export default {
   appearance: "dark",
   themeConfig: {
     siteTitle: "可视化技术总结",
+    title: "可视化技术总结",
     nav: [{ text: "Guide", link: "/guide" }],
     sidebar: [
       {
@@ -51,6 +52,15 @@ export default {
       //     },
       //   ],
       // },
+      {
+        text: "地图",
+        items: [
+          {
+            text: "地图异步加载同步化",
+            link: "/地图的异步加载同步化",
+          },
+        ],
+      },
     ],
     aside: true,
   },

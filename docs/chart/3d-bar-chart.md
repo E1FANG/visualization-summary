@@ -20,7 +20,7 @@ import NotStackChart from '../../src/chart/3dBarChart/not-stack-chart.vue';
 
 <Vertical />
 
-<details open>
+<details>
 <summary>代码</summary>
 
 ```vue
