@@ -3,7 +3,7 @@ import UsageBase from '../../src/plateMap/usageBase.vue'
 </script>
 
 
-# 基础用法
+## 基础用法
 - 通过useMapLoop设置地图数据，就可以用鼠标hover板块进行弹窗数据展示。
 - 对弹窗做了处理，使其不会超出板块地图
 
@@ -52,6 +52,7 @@ onMounted(() => {
 
 <br/>
 
+## API
 useMapLoop, 这个hook暴露了一些控制板块地图的api，方便使用者对地图进行操作
 
 | Api      | 作用 |

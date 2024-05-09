@@ -42,15 +42,15 @@ export default {
           },
         ],
       },
-      {
-        text: "2D图表",
-        items: [
-          {
-            text: "柱状图",
-            link: "/guide",
-          },
-        ],
-      },
+      // {
+      //   text: "2D图表",
+      //   items: [
+      //     {
+      //       text: "柱状图",
+      //       link: "/guide",
+      //     },
+      //   ],
+      // },
     ],
     aside: true,
   },
