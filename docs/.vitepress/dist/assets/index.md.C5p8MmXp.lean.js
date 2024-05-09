@@ -1,0 +1,1 @@
+import{_ as a,c as e,o as t,a3 as r}from"./chunks/framework.CWXIjQyU.js";const f=JSON.parse('{"title":"可视化技术总结","description":"","frontmatter":{},"headers":[],"relativePath":"index.md","filePath":"index.md"}'),o={name:"index.md"},n=r("",6),s=[n];function c(h,i,d,l,_,p){return t(),e("div",null,s)}const u=a(o,[["render",c]]);export{f as __pageData,u as default};
